@@ -60,26 +60,15 @@
             z-index: 1000;
         }
         
-        /* Burma (ရွှေ) YoYar (နီ) -HD (ဖြူ) Bold Styling */
         .header-brand h2 {
             font-size: 18px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             cursor: pointer;
         }
-        .header-brand h2 .part-burma {
-            color: var(--text-gold);
-            font-weight: 900;
-        }
-        .header-brand h2 .part-yoyar {
-            color: #ff3344;
-            font-weight: 900;
-        }
-        .header-brand h2 .part-hd {
-            color: #FFFFFF;
-            font-weight: 900;
-            text-shadow: 0 0 8px rgba(255,255,255,0.6);
-        }
+        .header-brand h2 .part-burma { color: var(--text-gold); font-weight: 900; }
+        .header-brand h2 .part-yoyar { color: #ff3344; font-weight: 900; }
+        .header-brand h2 .part-hd { color: #FFFFFF; font-weight: 900; text-shadow: 0 0 8px rgba(255,255,255,0.6); }
 
         /* Modern Search Bar Styling */
         .search-container {
@@ -102,9 +91,7 @@
             font-size: 12px;
             outline: none;
         }
-        .search-box input::placeholder {
-            color: var(--text-muted);
-        }
+        .search-box input::placeholder { color: var(--text-muted); }
         .search-btn {
             background-color: rgba(197, 155, 109, 0.15);
             border: none;
@@ -113,13 +100,9 @@
             font-size: 12px;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.2s;
-        }
-        .search-btn:active {
-            background-color: rgba(197, 155, 109, 0.3);
         }
 
-        /* 🌟 Animated Hero Banner Setup */
+        /* Animated Hero Banner Setup */
         .hero-banner-section {
             background: linear-gradient(180deg, rgba(74, 18, 26, 0.9) 0%, rgba(13, 14, 11, 1) 100%), 
                         url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=400');
@@ -133,15 +116,8 @@
             transform: translateY(-10px);
             animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
+        @keyframes heroFadeIn { to { opacity: 1; transform: translateY(0); } }
         
-        @keyframes heroFadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Typing Animation Layout */
         .hero-sub {
             font-size: 13px;
             color: var(--text-gold);
@@ -153,68 +129,24 @@
             overflow: hidden;
             animation: blink-caret 0.75s step-end infinite;
         }
-        .hero-main-title {
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 1.6;
-            color: #EAD9CB;
-            min-height: 60px;
-        }
-
-        /* Blink caret animation */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--text-gold); }
-        }
+        .hero-main-title { font-size: 12px; font-weight: 500; line-height: 1.6; color: #EAD9CB; min-height: 60px; }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--text-gold); } }
 
         /* Main Content Grid & Slide Dynamic Setup */
-        .main-body-content {
-            padding: 20px 14px;
-            transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
-        }
+        .main-body-content { padding: 20px 14px; }
 
-        /* 🌟 Top Category ရွေးချယ်ချိန် ထွက်ပေါ်လာမည့် Animated Smooth Slide အတန်းအစား */
-        .content-slide-in {
-            animation: smoothSlideIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-        }
-
-        @keyframes smoothSlideIn {
-            from {
-                opacity: 0;
-                transform: translateX(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+        /* 🌟 Category သီးသန့်အတွက် Smooth Slide အကျိုးသက်ရောက်မှု */
+        .content-slide { transition: transform 0.4s ease, opacity 0.4s ease; }
+        .slide-out { opacity: 0; transform: translateX(-40px); }
+        .slide-in { opacity: 1; transform: translateX(0); }
 
         /* Section Headings Style */
-        .section-left-title {
-            margin-bottom: 16px;
-            border-left: 3px solid var(--luxury-gold);
-            padding-left: 8px;
-        }
-        .section-left-title h3 {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #fff;
-            letter-spacing: 0.5px;
-        }
-        .section-left-title p {
-            font-size: 9px;
-            color: var(--text-muted);
-            margin-top: 1px;
-        }
+        .section-left-title { margin-bottom: 16px; border-left: 3px solid var(--luxury-gold); padding-left: 8px; }
+        .section-left-title h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; color: #fff; letter-spacing: 0.5px; }
+        .section-left-title p { font-size: 9px; color: var(--text-muted); margin-top: 1px; }
 
         /* Top Categories Grid Setup */
-        .top-categories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 25px;
-        }
+        .top-categories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 25px; }
         .circle-category-card {
             background-color: var(--card-dark-bg);
             border: 1px solid rgba(197, 155, 109, 0.15);
@@ -230,206 +162,78 @@
             cursor: pointer;
             transition: transform 0.2s ease;
         }
-        .circle-category-card:active {
-            transform: scale(0.95);
-        }
-        .circle-category-card img {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            opacity: 0.25;
-        }
-        .circle-category-card span {
-            position: relative;
-            z-index: 2;
-            font-size: 10px;
-            font-weight: bold;
-            color: var(--text-light);
-            text-transform: uppercase;
-        }
+        .circle-category-card:active { transform: scale(0.95); }
+        .circle-category-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
+        .circle-category-card span { position: relative; z-index: 2; font-size: 10px; font-weight: bold; color: var(--text-light); text-transform: uppercase; }
 
         /* Premium Platinum Discoveries Grid */
-        .shakes-style-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 28px;
-        }
+        .shakes-style-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px; }
         .shake-premium-card {
             background-color: #16110F;
             border: 1px solid rgba(197, 155, 109, 0.18);
             border-radius: 8px;
-            padding: 0; 
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
+            padding: 0; position: relative; cursor: pointer; overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4); display: flex; flex-direction: column;
         }
-        .shake-thumb-placeholder {
-            width: 100%;
-            aspect-ratio: 16/10; 
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-        }
-        .shake-thumb-placeholder img {
-            width: 100%; height: 100%; object-fit: cover;
-        }
-        .adult-badge {
-            position: absolute;
-            top: 6px; left: 6px;
-            background: linear-gradient(45deg, #e50914, #b20710);
-            color: #fff;
-            font-size: 8px;
-            font-weight: 800;
-            padding: 2px 5px;
-            border-radius: 4px;
-            z-index: 5;
-        }
-        .shake-card-info {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: space-between;
-        }
-        .shake-premium-card h4 {
-            font-size: 11px;
-            font-weight: 600;
-            color: #fff;
-            line-height: 1.4;
-            margin-bottom: 8px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; 
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .shake-meta-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(197, 155, 109, 0.08);
-            padding-top: 6px;
-        }
-        .shake-price {
-            font-size: 9px;
-            color: var(--text-muted);
-        }
-        .shake-watch-btn {
-            color: #fff;
-            background-color: #4A121A;
-            border: 1px solid rgba(197, 155, 109, 0.3);
-            font-size: 8px;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
+        .shake-thumb-placeholder { width: 100%; aspect-ratio: 16/10; background-color: #000; overflow: hidden; position: relative; }
+        .shake-thumb-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+        .adult-badge { position: absolute; top: 6px; left: 6px; background: linear-gradient(45deg, #e50914, #b20710); color: #fff; font-size: 8px; font-weight: 800; padding: 2px 5px; border-radius: 4px; z-index: 5; }
+        .shake-card-info { padding: 10px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .shake-premium-card h4 { font-size: 11px; font-weight: 600; color: #fff; line-height: 1.4; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+        .shake-meta-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(197, 155, 109, 0.08); padding-top: 6px; }
+        .shake-price { font-size: 9px; color: var(--text-muted); }
+        .shake-watch-btn { color: #fff; background-color: #4A121A; border: 1px solid rgba(197, 155, 109, 0.3); font-size: 8px; text-transform: uppercase; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
 
         /* Latest Column List Style */
-        .latest-blogs-column {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .blog-style-card {
-            background-color: var(--card-dark-bg);
-            border: 1px solid rgba(197, 155, 109, 0.08);
-            border-radius: 6px;
-            overflow: hidden;
-            padding: 8px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            cursor: pointer;
-        }
-        .blog-media-left {
-            width: 65px;
-            height: 85px;
-            border-radius: 4px;
-            overflow: hidden;
-            flex-shrink: 0;
-            background-color: #000;
-        }
+        .latest-blogs-column { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .blog-style-card { background-color: var(--card-dark-bg); border: 1px solid rgba(197, 155, 109, 0.08); border-radius: 6px; overflow: hidden; padding: 8px; display: flex; gap: 10px; align-items: center; cursor: pointer; }
+        .blog-media-left { width: 65px; height: 85px; border-radius: 4px; overflow: hidden; flex-shrink: 0; background-color: #000; }
         .blog-media-left img { width: 100%; height: 100%; object-fit: cover; }
         .blog-info-right { flex-grow: 1; overflow: hidden; }
-        .blog-info-right h4 {
-            font-size: 11px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 3px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .blog-info-right p {
-            font-size: 9px;
-            color: var(--text-muted);
-            line-height: 1.3;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+        .blog-info-right h4 { font-size: 11px; font-weight: 600; color: #fff; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .blog-info-right p { font-size: 9px; color: var(--text-muted); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
         /* Movie Player Section */
-        .cinema-theater-panel {
-            display: none;
-            background-color: var(--card-dark-bg);
-            border: 1px solid var(--luxury-gold);
-            padding: 8px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-        .video-player-outer-box {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 6px;
-        }
+        .cinema-theater-panel { display: none; background-color: var(--card-dark-bg); border: 1px solid var(--luxury-gold); padding: 8px; border-radius: 6px; margin-bottom: 20px; }
+        .video-player-outer-box { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 4px; overflow: hidden; margin-bottom: 6px; }
         .video-player-outer-box iframe { width: 100%; height: 100%; border: none; }
         .cinema-title-heading { font-size: 11px; font-weight: bold; color: var(--luxury-gold); line-height: 1.3; }
 
+        /* 🌟 Notice Pop-up Setup */
+        .notice-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; visibility: hidden; transition: all 0.4s ease;
+        }
+        .notice-overlay.show { opacity: 1; visibility: visible; }
+        .notice-box {
+            width: 88%; max-width: 360px; background-color: #1A1412;
+            border: 1px solid var(--luxury-gold); border-radius: 12px;
+            padding: 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            transform: scale(0.8); transition: transform 0.4s ease;
+        }
+        .notice-overlay.show .notice-box { transform: scale(1); }
+        .notice-title { font-size: 15px; color: var(--text-gold); font-weight: 800; margin-bottom: 12px; letter-spacing: 0.5px; }
+        .notice-text { font-size: 11.5px; color: #EAD9CB; line-height: 1.6; margin-bottom: 20px; text-align: left; }
+        .notice-btn-group { display: flex; flex-direction: column; gap: 8px; }
+        .notice-btn {
+            background: linear-gradient(45deg, #4A121A, #6b141d); color: #fff;
+            border: 1px solid rgba(197, 155, 109, 0.3); padding: 10px;
+            border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase;
+            cursor: pointer; text-decoration: none; transition: 0.2s;
+        }
+        .notice-btn.secondary { background: transparent; color: var(--text-gold); border: 1px solid var(--luxury-gold); }
+        .notice-btn:active { transform: scale(0.97); }
+
         /* Luxury Mobile Footer Setup */
-        footer {
-            background-color: #0A0807;
-            color: var(--text-muted);
-            padding: 25px 15px;
-            margin-top: auto;
-            border-top: 1px solid rgba(197, 155, 109, 0.15);
-        }
-        .footer-grid-4col {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .footer-block h5 {
-            color: var(--luxury-gold);
-            font-size: 10px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
+        footer { background-color: #0A0807; color: var(--text-muted); padding: 25px 15px; margin-top: auto; border-top: 1px solid rgba(197, 155, 109, 0.15); }
+        .footer-grid-4col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; }
+        .footer-block h5 { color: var(--luxury-gold); font-size: 10px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
         .footer-block ul { list-style: none; }
         .footer-block ul li { margin-bottom: 4px; }
-        .footer-block ul li a {
-            color: var(--text-muted);
-            font-size: 9px;
-            text-decoration: none;
-        }
-        .footer-bottom-bar {
-            border-top: 1px solid rgba(197, 155, 109, 0.05);
-            padding-top: 12px;
-            text-align: center;
-            font-size: 9px;
-        }
+        .footer-block ul li a { color: var(--text-muted); font-size: 9px; text-decoration: none; }
+        .footer-bottom-bar { border-top: 1px solid rgba(197, 155, 109, 0.05); padding-top: 12px; text-align: center; font-size: 9px; }
 
         .loader { display: block; margin: 15px auto; border: 2px solid rgba(255,255,255,0.05); border-top: 2px solid var(--luxury-gold); border-radius: 50%; width: 22px; height: 22px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -437,19 +241,32 @@
 </head>
 <body>
 
+<!-- 🌟 Notice Pop-up Layout -->
+<div class="notice-overlay" id="noticePopup">
+    <div class="notice-box">
+        <div class="notice-title">📢 သတိပေးချက်နှင့် နှုတ်ခွန်းဆက်လွှာ</div>
+        <div class="notice-text">
+            BurmaYoYar-HD မှ ကြိုဆိုပါတယ်ဗျာ။ ကျွန်ုပ်တို့ဆိုက်သည် နေ့စဉ် အကောင်းဆုံး ပရီမီယမ် ဇာတ်ကားများကို အရည်အသွေးမြင့်မားစွာဖြင့် အခမဲ့ တင်ဆက်ပေးနေပါသည်။<br><br>
+            လတ်တလော ဇာတ်ကားအသစ်များနှင့် VIP Group သတင်းအချက်အလက်များကို အောက်ပါ Telegram Bot တွင် လွယ်ကူစွာ စုံစမ်းနိုင်ပါပြီ။
+        </div>
+        <div class="notice-btn-group">
+            <a href="https://t.me/Asinpay_bot" target="_blank" class="notice-btn">🤖 Telegram Bot သို့သွားရန်</a>
+            <button class="notice-btn secondary" onclick="closeNotice()">👌 ဖတ်ပြီးပါပြီ</button>
+        </div>
+    </div>
+</div>
+
 <div class="app-container">
 
-    <!-- Header Block (Custom Multi-Color Title) -->
+    <!-- Header Block -->
     <header>
         <div class="header-brand" onclick="backToHome()">
-            <h2>
-                <span class="part-burma">Burma</span><span class="part-yoyar">YoYar</span><span class="part-hd">-HD</span>
-            </h2>
+            <h2><span class="part-burma">Burma</span><span class="part-yoyar">YoYar</span><span class="part-hd">-HD</span></h2>
         </div>
         <div class="header-menu-icon" onclick="backToHome()">☰</div>
     </header>
 
-    <!-- 🔍 Search Component Panel -->
+    <!-- Search Component Panel -->
     <div class="search-container">
         <div class="search-box">
             <input type="text" id="userSearchInput" placeholder="ဇာတ်ကားအမည်ဖြင့် ရှာဖွေပါ..." onkeypress="handleSearchKeyPress(event)">
@@ -463,8 +280,8 @@
         <div class="hero-main-title" id="animatedBody"></div>
     </div>
 
-    <!-- Core Feed Body (Added wrapper ID for slide actions) -->
-    <div class="main-body-content" id="dynamicContentWrapper">
+    <!-- Core Feed Body -->
+    <div class="main-body-content">
 
         <!-- Movie Player Panel -->
         <div class="cinema-theater-panel" id="theaterBox">
@@ -495,26 +312,27 @@
             </div>
         </div>
 
-        <!-- PLATINUM DISCOVERIES Section -->
-        <div class="section-left-title">
-            <h3>PLATINUM DISCOVERIES</h3>
-            <p>Explore The Recent Premium Exclusives This Week</p>
+        <!-- 🌟 Slide Dynamic Content Only Block -->
+        <div id="contentWrapper" class="content-slide">
+            <!-- PLATINUM DISCOVERIES Section -->
+            <div class="section-left-title">
+                <h3>PLATINUM DISCOVERIES</h3>
+                <p>Explore The Recent Premium Exclusives This Week</p>
+            </div>
+            <div class="shakes-style-grid" id="shakesGrid"></div>
+
+            <!-- LATEST MOVIES Section -->
+            <div class="section-left-title">
+                <h3>LATEST RELEASES</h3>
+                <p>Explore The Recent Most Uploaded Updates This Week</p>
+            </div>
+            <div class="latest-blogs-column" id="blogsColumn"></div>
         </div>
 
-        <div class="shakes-style-grid" id="shakesGrid"></div>
-
-        <!-- LATEST MOVIES Section -->
-        <div class="section-left-title">
-            <h3>LATEST RELEASES</h3>
-            <p>Explore The Recent Most Uploaded Updates This Week</p>
-        </div>
-
-        <div class="latest-blogs-column" id="blogsColumn"></div>
         <div class="loader" id="networkLoader" style="display:none;"></div>
-
     </div>
 
-    <!-- 4-Column Luxury Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-grid-4col">
             <div class="footer-block">
@@ -565,9 +383,17 @@
     document.addEventListener("DOMContentLoaded", () => {
         startEngine();
         startTextAnimations();
+        showNotice(); // Pop-up ကို ဖွင့်ပေးခြင်း
     });
 
-    // One-by-one Text Animation Logic
+    // 🌟 Notice Popup Functions
+    function showNotice() {
+        document.getElementById("noticePopup").classList.add("show");
+    }
+    function closeNotice() {
+        document.getElementById("noticePopup").classList.remove("show");
+    }
+
     function startTextAnimations() {
         let titleIdx = 0;
         let bodyIdx = 0;
@@ -591,7 +417,6 @@
                 setTimeout(typeBody, 40);
             }
         }
-
         typeTitle();
     }
 
@@ -610,13 +435,9 @@
             const data = await res.json();
 
             if (data && data.videos && data.videos.length > 0) {
+                document.getElementById("shakesGrid").innerHTML = "";
+                document.getElementById("blogsColumn").innerHTML = "";
                 renderGridAndColumn(data.videos);
-                
-                // 🌟 ဒေတာတွေ ပေါ်လာတဲ့အချိန်မှာ Wrapper အကွက်တစ်ခုလုံးကို Slide In Animation ပေးလိုက်ခြင်း
-                const wrapper = document.getElementById("dynamicContentWrapper");
-                wrapper.classList.remove("content-slide-in");
-                void wrapper.offsetWidth; // Trigger DOM reflow
-                wrapper.classList.add("content-slide-in");
             }
         } catch (e) {
             console.error(e);
@@ -669,34 +490,19 @@
         });
     }
 
-    // Search Controls Logic
     function triggerSearch() {
         const queryInput = document.getElementById("userSearchInput").value.trim();
         if (queryInput === "") return;
 
-        // Slide Animation ဝင်နိုင်အောင် Content Area ကို အရင် Fade Out အနည်းငယ် လုပ်ပေးခြင်း
-        const wrapper = document.getElementById("dynamicContentWrapper");
-        wrapper.style.opacity = "0";
-        wrapper.style.transform = "translateX(-20px)";
-
-        setTimeout(() => {
-            document.getElementById("shakesGrid").innerHTML = "";
-            document.getElementById("blogsColumn").innerHTML = "";
-            document.getElementById("theaterBox").style.display = "none";
-            document.getElementById("videoIframe").src = "";
-
-            currentKeyword = queryInput;
-            currentPage = 1;
-            wrapper.style.opacity = "1";
-            wrapper.style.transform = "translateX(0)";
-            loadContentFeed(currentKeyword, currentPage);
-        }, 200);
+        document.getElementById("theaterBox").style.display = "none";
+        document.getElementById("videoIframe").src = "";
+        currentKeyword = queryInput;
+        currentPage = 1;
+        loadContentFeed(currentKeyword, currentPage);
     }
 
     function handleSearchKeyPress(event) {
-        if (event.key === "Enter") {
-            triggerSearch();
-        }
+        if (event.key === "Enter") { triggerSearch(); }
     }
 
     function playVideo(url, title) {
@@ -707,25 +513,27 @@
     }
 
     function fetchNewCategory(cat) {
-        // 🌟 Category နှိပ်လိုက်ချိန်မှာ အကွက်ဟောင်း လျှောထွက်သွားပြီး Smooth ဖြစ်စေရန်အတွက် Animation Transition ပေးခြင်း
-        const wrapper = document.getElementById("dynamicContentWrapper");
-        wrapper.style.opacity = "0";
-        wrapper.style.transform = "translateX(-30px)";
+        const wrapper = document.getElementById("contentWrapper");
         
-        setTimeout(() => {
-            document.getElementById("shakesGrid").innerHTML = "";
-            document.getElementById("blogsColumn").innerHTML = "";
+        // 🌟 Category နှိပ်မှ Slide Out စလုပ်မယ်
+        wrapper.classList.remove("slide-in");
+        wrapper.classList.add("slide-out");
+        
+        setTimeout(async () => {
             document.getElementById("theaterBox").style.display = "none";
             document.getElementById("videoIframe").src = "";
             document.getElementById("userSearchInput").value = ""; 
             
+            // 🌟 ဒေတာကို Random Page နံပါတ်စနစ် (၁ ကနေ ၅ ကြား) ဖြင့် ခေါ်ယူခြင်း
             currentKeyword = cat;
             currentPage = Math.floor(Math.random() * 5) + 1;
             
-            wrapper.style.opacity = "1";
-            wrapper.style.transform = "translateX(0)";
-            loadContentFeed(currentKeyword, currentPage);
-        }, 250);
+            await loadContentFeed(currentKeyword, currentPage);
+            
+            // Slide In ပြန်ဝင်မယ်
+            wrapper.classList.remove("slide-out");
+            wrapper.classList.add("slide-in");
+        }, 400);
     }
 
     function backToHome() {
