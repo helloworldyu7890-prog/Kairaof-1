@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BurmaYoYar-HD - Premium Mobile</title>
     
-    <!-- Adsterra Codes -->
     <script src="https://pl30149725.effectivecpmnetwork.com/72/36/71/723671d6fb365692e8aae17ed2085563.js"></script>
     <script src="https://pl30149726.effectivecpmnetwork.com/22/3d/45/223d45507315c360b0744fa53a9dbbfc.js"></script>
 
     <style>
         :root {
-            /* 1000016971.jpg ပုံပါ Gradient အရောင်များကို အခြေခံထားသော ပရီမီယမ် Theme */
             --bg-pastel-gradient: linear-gradient(135deg, #C9D3EC 0%, #FED7B8 100%);
             --app-inner-bg: #14161D;    
             --card-dark-bg: #1A1D26;    
@@ -40,7 +38,6 @@
             min-height: 100vh;
         }
 
-        /* Mobile Container Setup */
         .app-container {
             width: 100%;
             max-width: 480px; 
@@ -52,7 +49,6 @@
             box-shadow: 0 0 30px rgba(0,0,0,0.3);
         }
 
-        /* Header Setup */
         header {
             background-color: var(--card-dark-bg);
             padding: 16px 20px;
@@ -76,7 +72,6 @@
         .header-brand h2 .part-hd { color: #FFFFFF; font-weight: 900; text-shadow: 0 0 8px rgba(255,255,255,0.4); }
         .header-menu-icon { color: var(--text-blue); font-size: 18px; cursor: pointer; }
 
-        /* Search Bar Styling */
         .search-container {
             padding: 12px 14px 4px 14px;
             background-color: var(--app-inner-bg);
@@ -108,7 +103,6 @@
             cursor: pointer;
         }
 
-        /* Hero Banner Setup */
         .hero-banner-section {
             background: linear-gradient(180deg, rgba(20, 22, 29, 0.85) 0%, rgba(20, 22, 29, 1) 100%), 
                         url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=400');
@@ -140,12 +134,10 @@
 
         .main-body-content { padding: 20px 14px; }
 
-        /* 🌟 Category Click Animation Wrapper Style */
         .content-slide { transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease; }
         .slide-out { opacity: 0; transform: translateX(-30px); }
         .slide-in { opacity: 1; transform: translateX(0); }
 
-        /* Section Headings Style */
         .section-left-title {
             margin-bottom: 16px;
             border-left: 3px solid var(--text-gold);
@@ -164,7 +156,6 @@
             margin-top: 1px;
         }
 
-        /* Top Categories Grid Setup */
         .top-categories-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -202,7 +193,6 @@
             text-transform: uppercase;
         }
 
-        /* Premium Grid */
         .shakes-style-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -278,7 +268,6 @@
             border-radius: 4px;
         }
 
-        /* Latest Column List Style */
         .latest-blogs-column {
             display: flex;
             flex-direction: column;
@@ -325,7 +314,6 @@
             overflow: hidden;
         }
 
-        /* Movie Player Section */
         .cinema-theater-panel {
             display: none;
             background-color: var(--card-dark-bg);
@@ -345,7 +333,7 @@
         .video-player-outer-box iframe { width: 100%; height: 100%; border: none; }
         .cinema-title-heading { font-size: 11px; font-weight: bold; color: var(--text-gold); line-height: 1.3; }
 
-        /* 📢 Notice Pop-up Layout Styling */
+        /* Notice Pop-up Layout Styling */
         .notice-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.85); z-index: 9999;
@@ -369,7 +357,6 @@
         }
         .notice-btn:active { transform: scale(0.97); }
 
-        /* Mobile Footer Setup */
         footer {
             background-color: #0E1015;
             color: var(--text-muted);
@@ -410,7 +397,6 @@
 </head>
 <body>
 
-<!-- 📢 Notice Pop-up Layout (No Bot Link) -->
 <div class="notice-overlay" id="noticePopup">
     <div class="notice-box">
         <div class="notice-title">📢 သတိပေးချက်နှင့် နှုတ်ခွန်းဆက်လွှာ</div>
@@ -424,7 +410,6 @@
 
 <div class="app-container">
 
-    <!-- Header Block -->
     <header>
         <div class="header-brand" onclick="backToHome()">
             <h2>
@@ -434,7 +419,6 @@
         <div class="header-menu-icon" onclick="backToHome()">☰</div>
     </header>
 
-    <!-- Search Panel -->
     <div class="search-container">
         <div class="search-box">
             <input type="text" id="userSearchInput" placeholder="ဇာတ်ကားအမည်ဖြင့် ရှာဖွေပါ..." onkeypress="handleSearchKeyPress(event)">
@@ -442,16 +426,13 @@
         </div>
     </div>
 
-    <!-- Banner -->
     <div class="hero-banner-section">
         <div class="hero-sub" id="animatedTitle"></div>
         <div class="hero-main-title" id="animatedBody"></div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-body-content">
 
-        <!-- Movie Player Panel -->
         <div class="cinema-theater-panel" id="theaterBox">
             <div class="video-player-outer-box">
                 <iframe id="videoIframe" src="" allowfullscreen></iframe>
@@ -459,7 +440,6 @@
             <h3 class="cinema-title-heading" id="videoTitle">Streaming Player Title...</h3>
         </div>
 
-        <!-- TOP CATEGORIES Section -->
         <div class="section-left-title">
             <h3>TOP CATEGORIES</h3>
             <p>Explore The Recent Most Watched Genres This Week</p>
@@ -480,17 +460,14 @@
             </div>
         </div>
 
-        <!-- 🌟 Categories နှိပ်လိုက်ရင်ကာမှ Smooth Slide Effect လုပ်မယ့် Wrapper -->
         <div id="contentWrapper" class="content-slide">
             
-            <!-- PLATINUM DISCOVERIES Section -->
             <div class="section-left-title">
                 <h3>PLATINUM DISCOVERIES</h3>
                 <p>Explore The Recent Premium Exclusives This Week</p>
             </div>
             <div class="shakes-style-grid" id="shakesGrid"></div>
 
-            <!-- LATEST MOVIES Section -->
             <div class="section-left-title">
                 <h3>LATEST RELEASES</h3>
                 <p>Explore The Recent Most Uploaded Updates This Week</p>
@@ -503,7 +480,6 @@
 
     </div>
 
-    <!-- Footer Block -->
     <footer>
         <div class="footer-grid-4col">
             <div class="footer-block">
@@ -545,7 +521,10 @@
     let currentKeyword = 'myanmar';
     let currentPage = 1;
     let loading = false;
-    let appendMode = false; // Scroll လုပ်တဲ့အခါ Data ဆက်တိုက်ပေါင်းထည့်ဖို့ သိစေမယ့် Variable
+    let appendMode = false;
+    
+    // 🌟 ဗီဒီယို ID တွေကို မှတ်ထားပြီး ထပ်မထပ် စစ်ထုတ်မယ့် စနစ်
+    let loadedVideoIds = new Set(); 
 
     const titleText = "ပရီမီယမ် ရသခံစားမှု့";
     const bodyText = "မြန်မာကားများတင်သာမက VIP , LOCAL LEAK , အဆင့်မြင့် အာရှ ဇာတ်ကားပေါင်းများစွာကို ပရီမီယမ်ဆန်စွာ အခမဲ့ အဆင့်မြင့်မြင့် ကြည့်ရှုနိူင်ပြီ!";
@@ -553,10 +532,9 @@
     document.addEventListener("DOMContentLoaded", () => {
         startEngine();
         startTextAnimations();
-        checkAndShowNotice(); // Pop-up ကို ပထမဆုံးတစ်ကြိမ်ပဲ ပေါ်အောင်စစ်ဆေးခြင်း
+        checkAndShowNotice();
     });
 
-    // 🌟 Once Only Notice Popup စနစ် (LocalStorage သုံး၍ တစ်ခါပဲပြမည်)
     function checkAndShowNotice() {
         const hasSeenNotice = localStorage.getItem("hasSeenBurmaYoYarNoticeFinal");
         if (!hasSeenNotice) {
@@ -597,7 +575,8 @@
 
     function startEngine() {
         appendMode = false;
-        currentPage = Math.floor(Math.random() * 8) + 1; // ပထမဆုံးဝင်ချိန် စာမျက်နှာ Random ရွေးပေးခြင်း
+        loadedVideoIds.clear(); // စဖွင့်ချိန်မှာ ID list ကို ရှင်းမယ်
+        currentPage = Math.floor(Math.random() * 8) + 1;
         loadContentFeed(currentKeyword, currentPage);
     }
 
@@ -607,7 +586,7 @@
         document.getElementById("networkLoader").style.display = "block";
 
         try {
-            const res = await fetch(`${API_URL}?query=${encodeURIComponent(keyword)}&per_page=10&page=${page}&thumbsize=big`);
+            const res = await fetch(`${API_URL}?query=${encodeURIComponent(keyword)}&per_page=20&page=${page}&thumbsize=big`);
             const data = await res.json();
 
             if (data && data.videos && data.videos.length > 0) {
@@ -615,7 +594,26 @@
                     document.getElementById("shakesGrid").innerHTML = "";
                     document.getElementById("blogsColumn").innerHTML = "";
                 }
-                renderGridAndColumn(data.videos);
+                
+                // 🌟 ID မထပ်တဲ့ ဗီဒီယိုတွေကိုပဲ သီးသန့် Filter စစ်ထုတ်ခြင်း
+                const uniqueVideos = data.videos.filter(video => {
+                    if (loadedVideoIds.has(video.id)) {
+                        return false; // ထပ်နေရင် ပယ်ထုတ်မယ်
+                    } else {
+                        loadedVideoIds.add(video.id); // အသစ်ဆိုရင် Array ထဲ မှတ်သားမယ်
+                        return true;
+                    }
+                });
+
+                if (uniqueVideos.length > 0) {
+                    renderGridAndColumn(uniqueVideos);
+                } else {
+                    // အကယ်၍ ခေါ်လိုက်တဲ့ Page ထဲက ကားအားလုံးက ထပ်နေရင် နောက်တစ်မျက်နှာကို auto ထပ်ခေါ်ပေးမယ်
+                    loading = false;
+                    currentPage++;
+                    loadContentFeed(keyword, currentPage);
+                    return;
+                }
             }
         } catch (e) {
             console.error(e);
@@ -629,6 +627,7 @@
         const shakesGrid = document.getElementById("shakesGrid");
         const blogsColumn = document.getElementById("blogsColumn");
 
+        // စုစုပေါင်းထဲက ပထမ ၄ ကားကို Grid ကတ်ပုံစံပြမယ်
         const firstFour = videos.slice(0, 4);
         firstFour.forEach(v => {
             const card = document.createElement("div");
@@ -650,6 +649,7 @@
             shakesGrid.appendChild(card);
         });
 
+        // ကျန်တဲ့ကားတွေကို အောက်က List ပုံစံထဲ ထည့်မယ်
         const remaining = videos.slice(4);
         remaining.forEach(v => {
             const item = document.createElement("div");
@@ -674,6 +674,8 @@
 
         document.getElementById("theaterBox").style.display = "none";
         document.getElementById("videoIframe").src = "";
+        
+        loadedVideoIds.clear(); // ရှာဖွေမှုအသစ်လုပ်ရင် ID List ကို ရှင်းမယ်
         currentKeyword = queryInput;
         currentPage = 1;
         appendMode = false;
@@ -691,11 +693,9 @@
         document.getElementById("videoTitle").innerText = title;
     }
 
-    // 🌟 Categories ခလုတ်များနှိပ်မှသာ Slide / Animation လုပ်မည့် လုပ်ဆောင်ချက်
     function fetchNewCategory(cat) {
         const wrapper = document.getElementById("contentWrapper");
         
-        // Content Slide Out ဖြည်းဖြည်းချင်း ပျောက်သွားစေရန်
         wrapper.classList.remove("slide-in");
         wrapper.classList.add("slide-out");
         
@@ -704,15 +704,13 @@
             document.getElementById("videoIframe").src = "";
             document.getElementById("userSearchInput").value = ""; 
             
+            loadedVideoIds.clear(); // Category အသစ်ပြောင်းရင် ID ောင်းတွေကို ရှင်းထုတ်မယ်
             currentKeyword = cat;
             appendMode = false; 
             
-            // 🌟 Category ချိန်းလိုက်တဲ့ တစ်ကြိမ်တည်းမှာသာ Random Page ရွေးချယ်မှု ပြုလုပ်မည်
             currentPage = Math.floor(Math.random() * 8) + 1;
-            
             await loadContentFeed(currentKeyword, currentPage);
             
-            // Content Slide In ပြန်ပေါ်လာစေရန်
             wrapper.classList.remove("slide-out");
             wrapper.classList.add("slide-in");
         }, 350);
@@ -722,12 +720,11 @@
         fetchNewCategory('myanmar');
     }
 
-    // 🌟 Scroll လုပ်ပြီး ဒေတာတိုးလာတဲ့အခါမှာတော့ Random လုံးဝမလုပ်ဘဲ စာမျက်နှာအလိုက် ပုံမှန်အတိုင်း အောက်ကနေ ဆက်တိုးလာစေမည့်စနစ်
     window.onscroll = function() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
             if(!loading) {
                 appendMode = true; 
-                currentPage++; // Page စနစ်တကျ အစီအစဉ်အတိုင်း ၁ ခုချင်းပဲ တိုးသွားပါမယ်
+                currentPage++; 
                 loadContentFeed(currentKeyword, currentPage);
             }
         }
