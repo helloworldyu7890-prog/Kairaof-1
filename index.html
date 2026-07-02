@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BurmaYoYar-HD - Premium Mobile</title>
     
+    <!-- Adsterra Codes -->
     <script src="https://pl30149725.effectivecpmnetwork.com/72/36/71/723671d6fb365692e8aae17ed2085563.js"></script>
     <script src="https://pl30149726.effectivecpmnetwork.com/22/3d/45/223d45507315c360b0744fa53a9dbbfc.js"></script>
 
     <style>
         :root {
+            /* Luxury Velvet Color Palette */
             --bg-dark-matte: #130E0B;   
-            --velvet-crimson: #E50914;  
+            --velvet-crimson: #E50914;  /* စာသားမှာ ပေါ်လွင်အောင် နီရင့်တောက်တောက် သုံးထားခြင်း */
             --luxury-gold: #C59B6D;     
             --card-dark-bg: #1A1412;    
             --text-gold: #D4AF37;
@@ -34,6 +36,7 @@
             justify-content: center;
         }
 
+        /* Mobile Container Setup */
         .app-container {
             width: 100%;
             max-width: 480px; 
@@ -44,6 +47,7 @@
             overflow-x: hidden;
         }
 
+        /* Luxury Header Setup */
         header {
             background-color: var(--card-dark-bg);
             padding: 16px 20px;
@@ -56,16 +60,28 @@
             z-index: 1000;
         }
         
+        /* 🎨 Burma (ရွှေ) YoYar (နီ) -HD (ဖြူ) Bold Styling */
         .header-brand h2 {
             font-size: 18px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             cursor: pointer;
         }
-        .header-brand h2 .part-burma { color: var(--text-gold); font-weight: 900; }
-        .header-brand h2 .part-yoyar { color: #ff3344; font-weight: 900; }
-        .header-brand h2 .part-hd { color: #FFFFFF; font-weight: 900; text-shadow: 0 0 8px rgba(255,255,255,0.6); }
+        .header-brand h2 .part-burma {
+            color: var(--text-gold);
+            font-weight: 900;
+        }
+        .header-brand h2 .part-yoyar {
+            color: #ff3344;
+            font-weight: 900;
+        }
+        .header-brand h2 .part-hd {
+            color: #FFFFFF;
+            font-weight: 900;
+            text-shadow: 0 0 8px rgba(255,255,255,0.6);
+        }
 
+        /* Modern Search Bar Styling */
         .search-container {
             padding: 12px 14px 4px 14px;
             background-color: var(--bg-dark-matte);
@@ -86,7 +102,9 @@
             font-size: 12px;
             outline: none;
         }
-        .search-box input::placeholder { color: var(--text-muted); }
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
         .search-btn {
             background-color: rgba(197, 155, 109, 0.15);
             border: none;
@@ -95,8 +113,13 @@
             font-size: 12px;
             font-weight: bold;
             cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-btn:active {
+            background-color: rgba(197, 155, 109, 0.3);
         }
 
+        /* Hero Banner Setup */
         .hero-banner-section {
             background: linear-gradient(180deg, rgba(74, 18, 26, 0.9) 0%, rgba(13, 14, 11, 1) 100%), 
                         url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=400');
@@ -106,12 +129,9 @@
             padding: 30px 20px;
             text-align: left;
             min-height: 155px;
-            opacity: 0;
-            transform: translateY(-10px);
-            animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
-        @keyframes heroFadeIn { to { opacity: 1; transform: translateY(0); } }
         
+        /* 🌟 Typing Animation Layout */
         .hero-sub {
             font-size: 13px;
             color: var(--text-gold);
@@ -123,21 +143,51 @@
             overflow: hidden;
             animation: blink-caret 0.75s step-end infinite;
         }
-        .hero-main-title { font-size: 12px; font-weight: 500; line-height: 1.6; color: #EAD9CB; min-height: 60px; }
-        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--text-gold); } }
+        .hero-main-title {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #EAD9CB;
+            min-height: 60px;
+        }
 
-        .main-body-content { padding: 20px 14px; }
+        /* Blink caret animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--text-gold); }
+        }
 
-        /* 🌟 Category Click Smooth Slide Only CSS Animation */
-        .content-slide { transition: transform 0.4s ease, opacity 0.4s ease; }
-        .slide-out { opacity: 0; transform: translateX(-40px); }
-        .slide-in { opacity: 1; transform: translateX(0); }
+        /* Main Content Grid */
+        .main-body-content {
+            padding: 20px 14px;
+        }
 
-        .section-left-title { margin-bottom: 16px; border-left: 3px solid var(--luxury-gold); padding-left: 8px; }
-        .section-left-title h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; color: #fff; letter-spacing: 0.5px; }
-        .section-left-title p { font-size: 9px; color: var(--text-muted); margin-top: 1px; }
+        /* Section Headings Style */
+        .section-left-title {
+            margin-bottom: 16px;
+            border-left: 3px solid var(--luxury-gold);
+            padding-left: 8px;
+        }
+        .section-left-title h3 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        .section-left-title p {
+            font-size: 9px;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
 
-        .top-categories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 25px; }
+        /* Top Categories Grid Setup */
+        .top-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 25px;
+        }
         .circle-category-card {
             background-color: var(--card-dark-bg);
             border: 1px solid rgba(197, 155, 109, 0.15);
@@ -151,75 +201,204 @@
             text-align: center;
             padding: 4px;
             cursor: pointer;
-            transition: transform 0.2s ease;
         }
-        .circle-category-card:active { transform: scale(0.95); }
-        .circle-category-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
-        .circle-category-card span { position: relative; z-index: 2; font-size: 10px; font-weight: bold; color: var(--text-light); text-transform: uppercase; }
+        .circle-category-card img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.25;
+        }
+        .circle-category-card span {
+            position: relative;
+            z-index: 2;
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
 
-        .shakes-style-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 28px; }
+        /* Premium Platinum Discoveries Grid */
+        .shakes-style-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
         .shake-premium-card {
             background-color: #16110F;
             border: 1px solid rgba(197, 155, 109, 0.18);
             border-radius: 8px;
-            padding: 0; position: relative; cursor: pointer; overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4); display: flex; flex-direction: column;
+            padding: 0; 
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
         }
-        .shake-thumb-placeholder { width: 100%; aspect-ratio: 16/10; background-color: #000; overflow: hidden; position: relative; }
-        .shake-thumb-placeholder img { width: 100%; height: 100%; object-fit: cover; }
-        .adult-badge { position: absolute; top: 6px; left: 6px; background: linear-gradient(45deg, #e50914, #b20710); color: #fff; font-size: 8px; font-weight: 800; padding: 2px 5px; border-radius: 4px; z-index: 5; }
-        .shake-card-info { padding: 10px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
-        .shake-premium-card h4 { font-size: 11px; font-weight: 600; color: #fff; line-height: 1.4; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
-        .shake-meta-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(197, 155, 109, 0.08); padding-top: 6px; }
-        .shake-price { font-size: 9px; color: var(--text-muted); }
-        .shake-watch-btn { color: #fff; background-color: #4A121A; border: 1px solid rgba(197, 155, 109, 0.3); font-size: 8px; text-transform: uppercase; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
+        .shake-thumb-placeholder {
+            width: 100%;
+            aspect-ratio: 16/10; 
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+        }
+        .shake-thumb-placeholder img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .adult-badge {
+            position: absolute;
+            top: 6px; left: 6px;
+            background: linear-gradient(45deg, #e50914, #b20710);
+            color: #fff;
+            font-size: 8px;
+            font-weight: 800;
+            padding: 2px 5px;
+            border-radius: 4px;
+            z-index: 5;
+        }
+        .shake-card-info {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        .shake-premium-card h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .shake-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(197, 155, 109, 0.08);
+            padding-top: 6px;
+        }
+        .shake-price {
+            font-size: 9px;
+            color: var(--text-muted);
+        }
+        .shake-watch-btn {
+            color: #fff;
+            background-color: #4A121A;
+            border: 1px solid rgba(197, 155, 109, 0.3);
+            font-size: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
 
-        .latest-blogs-column { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-        .blog-style-card { background-color: var(--card-dark-bg); border: 1px solid rgba(197, 155, 109, 0.08); border-radius: 6px; overflow: hidden; padding: 8px; display: flex; gap: 10px; align-items: center; cursor: pointer; }
-        .blog-media-left { width: 65px; height: 85px; border-radius: 4px; overflow: hidden; flex-shrink: 0; background-color: #000; }
+        /* Latest Column List Style */
+        .latest-blogs-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .blog-style-card {
+            background-color: var(--card-dark-bg);
+            border: 1px solid rgba(197, 155, 109, 0.08);
+            border-radius: 6px;
+            overflow: hidden;
+            padding: 8px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            cursor: pointer;
+        }
+        .blog-media-left {
+            width: 65px;
+            height: 85px;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background-color: #000;
+        }
         .blog-media-left img { width: 100%; height: 100%; object-fit: cover; }
         .blog-info-right { flex-grow: 1; overflow: hidden; }
-        .blog-info-right h4 { font-size: 11px; font-weight: 600; color: #fff; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .blog-info-right p { font-size: 9px; color: var(--text-muted); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-info-right h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .blog-info-right p {
+            font-size: 9px;
+            color: var(--text-muted);
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
 
-        .cinema-theater-panel { display: none; background-color: var(--card-dark-bg); border: 1px solid var(--luxury-gold); padding: 8px; border-radius: 6px; margin-bottom: 20px; }
-        .video-player-outer-box { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 4px; overflow: hidden; margin-bottom: 6px; }
+        /* Movie Player Section */
+        .cinema-theater-panel {
+            display: none;
+            background-color: var(--card-dark-bg);
+            border: 1px solid var(--luxury-gold);
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .video-player-outer-box {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
         .video-player-outer-box iframe { width: 100%; height: 100%; border: none; }
         .cinema-title-heading { font-size: 11px; font-weight: bold; color: var(--luxury-gold); line-height: 1.3; }
 
-        / Notice Pop-up Overlay Style */
-        .notice-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); z-index: 9999;
-            display: flex; justify-content: center; align-items: center;
-            opacity: 0; visibility: hidden; transition: all 0.4s ease;
+        /* Luxury Mobile Footer Setup */
+        footer {
+            background-color: #0A0807;
+            color: var(--text-muted);
+            padding: 25px 15px;
+            margin-top: auto;
+            border-top: 1px solid rgba(197, 155, 109, 0.15);
         }
-        .notice-overlay.show { opacity: 1; visibility: visible; }
-        .notice-box {
-            width: 88%; max-width: 360px; background-color: #1A1412;
-            border: 1px solid var(--luxury-gold); border-radius: 12px;
-            padding: 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-            transform: scale(0.8); transition: transform 0.4s ease;
+        .footer-grid-4col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
         }
-        .notice-overlay.show .notice-box { transform: scale(1); }
-        .notice-title { font-size: 15px; color: var(--text-gold); font-weight: 800; margin-bottom: 12px; letter-spacing: 0.5px; }
-        .notice-text { font-size: 11.5px; color: #EAD9CB; line-height: 1.6; margin-bottom: 20px; text-align: center; }
-        .notice-btn-group { display: flex; flex-direction: column; gap: 8px; }
-        .notice-btn {
-            background: linear-gradient(45deg, #4A121A, #6b141d); color: #fff;
-            border: 1px solid rgba(197, 155, 109, 0.3); padding: 10px;
-            border-radius: 6px; font-size: 12px; font-weight: bold; text-transform: uppercase;
-            cursor: pointer; transition: 0.2s;
+        .footer-block h5 {
+            color: var(--luxury-gold);
+            font-size: 10px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
-        .notice-btn:active { transform: scale(0.97); }
-
-        footer { background-color: #0A0807; color: var(--text-muted); padding: 25px 15px; margin-top: auto; border-top: 1px solid rgba(197, 155, 109, 0.15); }
-        .footer-grid-4col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; }
-        .footer-block h5 { color: var(--luxury-gold); font-size: 10px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
         .footer-block ul { list-style: none; }
         .footer-block ul li { margin-bottom: 4px; }
-        .footer-block ul li a { color: var(--text-muted); font-size: 9px; text-decoration: none; }
-        .footer-bottom-bar { border-top: 1px solid rgba(197, 155, 109, 0.05); padding-top: 12px; text-align: center; font-size: 9px; }
+        .footer-block ul li a {
+            color: var(--text-muted);
+            font-size: 9px;
+            text-decoration: none;
+        }
+        .footer-bottom-bar {
+            border-top: 1px solid rgba(197, 155, 109, 0.05);
+            padding-top: 12px;
+            text-align: center;
+            font-size: 9px;
+        }
 
         .loader { display: block; margin: 15px auto; border: 2px solid rgba(255,255,255,0.05); border-top: 2px solid var(--luxury-gold); border-radius: 50%; width: 22px; height: 22px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -227,28 +406,19 @@
 </head>
 <body>
 
-<div class="notice-overlay" id="noticePopup">
-    <div class="notice-box">
-        <div class="notice-title">📢 သတိပေးချက်နှင့် နှုတ်ခွန်းဆက်လွှာ</div>
-        <div class="notice-text">
-            BurmaYoYar-HD မှ ကြိုဆိုပါတယ်ဗျာ။ ကျွန်ုပ်တို့ဆိုက်သည် နေ့စဉ် အကောင်းဆုံး ပရီမီယမ် ဇာတ်ကားများကို အရည်အသွေးမြင့်မားစွာဖြင့် အခမဲ့ တင်ဆက်ပေးနေပါသည်။<br><br>
-            ဆိုက်အတွင်း အဆင်မပြေမှုတစ်စုံတစ်ရာရှိပါက ခေတ္တစောင့်ဆိုင်း၍ ပြန်လည်ကြည့်ရှုပေးပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။
-        </div>
-        <div class="notice-btn-group">
-            <button class="notice-btn" onclick="closeNotice()">👌 ဖတ်ပြီးပါပြီ</button>
-        </div>
-    </div>
-</div>
-
 <div class="app-container">
 
+    <!-- Header Block (Custom Multi-Color Title) -->
     <header>
         <div class="header-brand" onclick="backToHome()">
-            <h2><span class="part-burma">Burma</span><span class="part-yoyar">YoYar</span><span class="part-hd">-HD</span></h2>
+            <h2>
+                <span class="part-burma">Burma</span><span class="part-yoyar">YoYar</span><span class="part-hd">-HD</span>
+            </h2>
         </div>
         <div class="header-menu-icon" onclick="backToHome()">☰</div>
     </header>
 
+    <!-- 🔍 Search Component Panel -->
     <div class="search-container">
         <div class="search-box">
             <input type="text" id="userSearchInput" placeholder="ဇာတ်ကားအမည်ဖြင့် ရှာဖွေပါ..." onkeypress="handleSearchKeyPress(event)">
@@ -256,13 +426,16 @@
         </div>
     </div>
 
+    <!-- Luxury Showcase Banner with Auto Typing Text -->
     <div class="hero-banner-section">
         <div class="hero-sub" id="animatedTitle"></div>
         <div class="hero-main-title" id="animatedBody"></div>
     </div>
 
+    <!-- Core Feed Body -->
     <div class="main-body-content">
 
+        <!-- Movie Player Panel -->
         <div class="cinema-theater-panel" id="theaterBox">
             <div class="video-player-outer-box">
                 <iframe id="videoIframe" src="" allowfullscreen></iframe>
@@ -270,6 +443,7 @@
             <h3 class="cinema-title-heading" id="videoTitle">Streaming Player Title...</h3>
         </div>
 
+        <!-- TOP CATEGORIES Section -->
         <div class="section-left-title">
             <h3>TOP CATEGORIES</h3>
             <p>Explore The Recent Most Watched Genres This Week</p>
@@ -290,29 +464,33 @@
             </div>
         </div>
 
-        <div id="contentWrapper" class="content-slide">
-            <div class="section-left-title">
-                <h3>PLATINUM DISCOVERIES</h3>
-                <p>Explore The Recent Premium Exclusives This Week</p>
-            </div>
-            <div class="shakes-style-grid" id="shakesGrid"></div>
-
-            <div class="section-left-title">
-                <h3>LATEST RELEASES</h3>
-                <p>Explore The Recent Most Uploaded Updates This Week</p>
-            </div>
-            <div class="latest-blogs-column" id="blogsColumn"></div>
+        <!-- PLATINUM DISCOVERIES Section -->
+        <div class="section-left-title">
+            <h3>PLATINUM DISCOVERIES</h3>
+            <p>Explore The Recent Premium Exclusives This Week</p>
         </div>
 
+        <div class="shakes-style-grid" id="shakesGrid"></div>
+
+        <!-- LATEST MOVIES Section -->
+        <div class="section-left-title">
+            <h3>LATEST RELEASES</h3>
+            <p>Explore The Recent Most Uploaded Updates This Week</p>
+        </div>
+
+        <div class="latest-blogs-column" id="blogsColumn"></div>
         <div class="loader" id="networkLoader" style="display:none;"></div>
+
     </div>
 
+    <!-- 4-Column Luxury Footer -->
     <footer>
         <div class="footer-grid-4col">
             <div class="footer-block">
                 <h5>Products</h5>
                 <ul>
                     <li><a href="#">Premium VIP</a></li>
+                    <li><a href="https://t.me/Asinpay_bot" target="_blank">Telegram Bot</a></li>
                 </ul>
             </div>
             <div class="footer-block">
@@ -326,12 +504,13 @@
                 <h5>Company Info</h5>
                 <ul>
                     <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Support</a></li>
                 </ul>
             </div>
             <div class="footer-block">
                 <h5>Follow Us</h5>
                 <ul>
-                    <li><a href="#">Telegram Channel</a></li>
+                    <li><a href="https://t.me/Asinpay_bot" target="_blank">Telegram Channel</a></li>
                 </ul>
             </div>
         </div>
@@ -347,30 +526,17 @@
     let currentKeyword = 'myanmar';
     let currentPage = 1;
     let loading = false;
-    let appendMode = false; // Scroll ဆွဲတဲ့အခါ အောက်မှာပဲ စာမျက်နှာအသစ် ဆက်တိုးဖို့ သိစေမယ့် Variable
 
+    // Text Animation Data
     const titleText = "ပရီမီယမ် ရသခံစားမှု့";
-    const bodyText = "မြန်မာကားများတင်သာမက VIP , LOCAL LEAK , အဆင့်မြင့် အာရှ ဇာတ်ကားပေါင်းများစွာကို ပရီမီယမ်ဆန်စွာ အခမဲ့ အဆင့်မြင့်မြင့် ကြည့်ရှုနိူင်ပြီ!";
+    const bodyText = "မြန်မာကားများတင်သာမက VIP , LOCAL LEAK , အဆင့်မြင့် အာရှ ဇာတ်ကားပေါင်းများစွာကို ပရီမီယမ်ဆန်စွာ အခမဲ့ အဆင့်မြင့်မြင့် ကြည့်ရှုနิူင်ပြီ!";
 
     document.addEventListener("DOMContentLoaded", () => {
         startEngine();
         startTextAnimations();
-        checkAndShowNotice(); // Pop-up ကို ပထမဆုံးတစ်ကြိမ်ပဲ ပေါ်အောင်စစ်ဆေးခြင်း
     });
 
-    // 🌟 Once Only Notice Popup System
-    function checkAndShowNotice() {
-        const hasSeenNotice = localStorage.getItem("hasSeenBurmaYoYarNoticeV2");
-        if (!hasSeenNotice) {
-            document.getElementById("noticePopup").classList.add("show");
-        }
-    }
-
-    function closeNotice() {
-        document.getElementById("noticePopup").classList.remove("show");
-        localStorage.setItem("hasSeenBurmaYoYarNoticeV2", "true"); // LocalStorage ထဲ တစ်ခါတည်း မှတ်သားပြီး နောက်ဘယ်တော့မှ မပြတော့ပါ
-    }
-
+    // 🌟 One-by-one Text Animation Logic
     function startTextAnimations() {
         let titleIdx = 0;
         let bodyIdx = 0;
@@ -383,6 +549,7 @@
                 titleIdx++;
                 setTimeout(typeTitle, 90);
             } else {
+                // Title ပြီးရင် Body ကို စက္ကန့်ဝက်နားပြီး ဆက်တိုက်ရိုက်မည်
                 setTimeout(typeBody, 400);
             }
         }
@@ -394,12 +561,12 @@
                 setTimeout(typeBody, 40);
             }
         }
+
         typeTitle();
     }
 
     function startEngine() {
-        appendMode = false;
-        currentPage = Math.floor(Math.random() * 8) + 1; // ပထမဆုံးဝင်ချိန်ပဲ Random စာမျက်နှာကို ၁ ကြိမ် ယူပေးခြင်း
+        currentPage = Math.floor(Math.random() * 8) + 1;
         loadContentFeed(currentKeyword, currentPage);
     }
 
@@ -413,11 +580,6 @@
             const data = await res.json();
 
             if (data && data.videos && data.videos.length > 0) {
-                if (!appendMode) {
-                    // Category အသစ်ချိန်းရင် မျက်နှာပြင် အဟောင်းတွေ အကုန် အရင်ရှင်းထုတ်မယ်
-                    document.getElementById("shakesGrid").innerHTML = "";
-                    document.getElementById("blogsColumn").innerHTML = "";
-                }
                 renderGridAndColumn(data.videos);
             }
         } catch (e) {
@@ -464,27 +626,33 @@
                 </div>
                 <div class="blog-info-right">
                     <h4>${v.title}</h4>
-                    <p>Exclusive premium screening update. Recorded views: ${parseInt(v.views).toLocaleString()} hits.</p>
+                    <p>Exclusive premium luxury screening update. Recorded views: ${parseInt(v.views).toLocaleString()} hits.</p>
                 </div>
             `;
             blogsColumn.appendChild(item);
         });
     }
 
+    // 🔍 Search Controls Logic
     function triggerSearch() {
         const queryInput = document.getElementById("userSearchInput").value.trim();
         if (queryInput === "") return;
 
+        // Clear UI Content
+        document.getElementById("shakesGrid").innerHTML = "";
+        document.getElementById("blogsColumn").innerHTML = "";
         document.getElementById("theaterBox").style.display = "none";
         document.getElementById("videoIframe").src = "";
+
         currentKeyword = queryInput;
         currentPage = 1;
-        appendMode = false; 
         loadContentFeed(currentKeyword, currentPage);
     }
 
     function handleSearchKeyPress(event) {
-        if (event.key === "Enter") { triggerSearch(); }
+        if (event.key === "Enter") {
+            triggerSearch();
+        }
     }
 
     function playVideo(url, title) {
@@ -494,43 +662,25 @@
         document.getElementById("videoTitle").innerText = title;
     }
 
-    // 🌟 Top Categories ကို နှိပ်မှ အလုပ်လုပ်မယ့် စနစ်
     function fetchNewCategory(cat) {
-        const wrapper = document.getElementById("contentWrapper");
-        
-        // 1. Animation စဖွင့်မယ်
-        wrapper.classList.remove("slide-in");
-        wrapper.classList.add("slide-out");
-        
-        setTimeout(async () => {
-            document.getElementById("theaterBox").style.display = "none";
-            document.getElementById("videoIframe").src = "";
-            document.getElementById("userSearchInput").value = ""; 
-            
-            currentKeyword = cat;
-            appendMode = false; // စာမျက်နှာ အဟောင်းတွေကို ရှင်းထုတ်မယ်
-            
-            // 2. နှိပ်လိုက်တဲ့ တစ်ကြိမ်တည်းမှာပဲ စာမျက်နှာအသစ်ရဖို့ Random ကောက်ယူမယ်
-            currentPage = Math.floor(Math.random() * 8) + 1;
-            
-            await loadContentFeed(currentKeyword, currentPage);
-            
-            // 3. Animation ပြီးဆုံးကြောင်း အသွင်ပြောင်းမယ်
-            wrapper.classList.remove("slide-out");
-            wrapper.classList.add("slide-in");
-        }, 400);
+        document.getElementById("shakesGrid").innerHTML = "";
+        document.getElementById("blogsColumn").innerHTML = "";
+        document.getElementById("theaterBox").style.display = "none";
+        document.getElementById("videoIframe").src = "";
+        document.getElementById("userSearchInput").value = ""; // Clear search layout
+        currentKeyword = cat;
+        currentPage = Math.floor(Math.random() * 5) + 1;
+        loadContentFeed(currentKeyword, currentPage);
     }
 
     function backToHome() {
         fetchNewCategory('myanmar');
     }
 
-    // 🌟 အောက်ကို Scroll လုပ်ပြီး ကားအသစ်တွေ ထပ်တိုးလာတဲ့စနစ် (ဒီမှာ Random လုံးဝမလုပ်ဘဲ Page တွေကို +1 ပုံမှန်တိုးသွားပါမယ်)
     window.onscroll = function() {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
             if(!loading) {
-                appendMode = true; // အဟောင်းတွေမဖျက်ဘဲ အောက်ကနေ ပုံမှန်အတိုင်း ဒေတာဆက်တိုးလာအောင် လုပ်မယ်
-                currentPage++; / စာမျက်နှာကို ၁ ခုချင်းစီ အစဉ်လိုက်အတိုင်း ဆက်တိုက်ခေါ်ယူမယ် (Random စနစ်မပါပါ)
+                currentPage++;
                 loadContentFeed(currentKeyword, currentPage);
             }
         }
