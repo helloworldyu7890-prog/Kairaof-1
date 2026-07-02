@@ -5,400 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>BurmaYoYar-HD - Premium Mobile</title>
     
-    <!-- Adsterra Codes -->
     <script src="https://pl30149725.effectivecpmnetwork.com/72/36/71/723671d6fb365692e8aae17ed2085563.js"></script>
     <script src="https://pl30149726.effectivecpmnetwork.com/22/3d/45/223d45507315c360b0744fa53a9dbbfc.js"></script>
 
     <style>
         :root {
-            /* Luxury Velvet Color Palette */
-            --bg-dark-matte: #130E0B;   
-            --velvet-crimson: #E50914;  /* စာသားမှာ ပေါ်လွင်အောင် နီရင့်တောက်တောက် သုံးထားခြင်း */
-            --luxury-gold: #C59B6D;     
-            --card-dark-bg: #1A1412;    
+            --bg-dark-matte: #130E0B;
+            --velvet-crimson: #E50914;
+            --luxury-gold: #C59B6D;
+            --card-dark-bg: #1A1412;
             --text-gold: #D4AF37;
             --text-light: #EAD9CB;
-            --text-muted: #8E7A6E;
         }
 
-        * { 
-            box-sizing: border-box; 
-            margin: 0; 
-            padding: 0; 
-            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; 
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        body { 
-            background-color: var(--bg-dark-matte);
-            color: var(--text-light);
-            display: flex;
-            justify-content: center;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
+        body { background-color: var(--bg-dark-matte); color: var(--text-light); display: flex; justify-content: center; }
 
-        /* Mobile Container Setup */
-        .app-container {
-            width: 100%;
-            max-width: 480px; 
-            background-color: var(--bg-dark-matte);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
+        .app-container { width: 100%; max-width: 480px; background-color: var(--bg-dark-matte); min-height: 100vh; overflow-x: hidden; }
 
-        /* Luxury Header Setup */
-        header {
-            background-color: var(--card-dark-bg);
-            padding: 16px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(197, 155, 109, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        /* Smooth Content Animation */
+        @keyframes fadeInSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        /* 🎨 Burma (ရွှေ) YoYar (နီ) -HD (ဖြူ) Bold Styling */
-        .header-brand h2 {
-            font-size: 18px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        .header-brand h2 .part-burma {
-            color: var(--text-gold);
-            font-weight: 900;
-        }
-        .header-brand h2 .part-yoyar {
-            color: #ff3344;
-            font-weight: 900;
-        }
-        .header-brand h2 .part-hd {
-            color: #FFFFFF;
-            font-weight: 900;
-            text-shadow: 0 0 8px rgba(255,255,255,0.6);
-        }
+        .content-transition { animation: fadeInSlide 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
 
-        /* Modern Search Bar Styling */
-        .search-container {
-            padding: 12px 14px 4px 14px;
-            background-color: var(--bg-dark-matte);
-        }
-        .search-box {
-            display: flex;
-            background-color: var(--card-dark-bg);
-            border: 1px solid rgba(197, 155, 109, 0.25);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .search-box input {
-            flex-grow: 1;
-            background: transparent;
-            border: none;
-            padding: 12px;
-            color: #fff;
-            font-size: 12px;
-            outline: none;
-        }
-        .search-box input::placeholder {
-            color: var(--text-muted);
-        }
-        .search-btn {
-            background-color: rgba(197, 155, 109, 0.15);
-            border: none;
-            color: var(--text-gold);
-            padding: 0 16px;
-            font-size: 12px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .search-btn:active {
-            background-color: rgba(197, 155, 109, 0.3);
-        }
-
-        /* Hero Banner Setup */
+        /* Hero Banner Animation */
         .hero-banner-section {
-            background: linear-gradient(180deg, rgba(74, 18, 26, 0.9) 0%, rgba(13, 14, 11, 1) 100%), 
-                        url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=400');
-            background-size: cover;
-            background-position: center;
-            color: var(--text-light);
+            background: linear-gradient(180deg, rgba(74, 18, 26, 0.9) 0%, rgba(13, 14, 11, 1) 100%);
             padding: 30px 20px;
-            text-align: left;
-            min-height: 155px;
+            animation: heroFadeIn 1s ease-in-out;
         }
-        
-        /* 🌟 Typing Animation Layout */
-        .hero-sub {
-            font-size: 13px;
-            color: var(--text-gold);
-            margin-bottom: 8px;
-            font-weight: 800;
-            border-right: 2px solid var(--text-gold);
-            width: fit-content;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: blink-caret 0.75s step-end infinite;
-        }
-        .hero-main-title {
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 1.6;
-            color: #EAD9CB;
-            min-height: 60px;
-        }
+        @keyframes heroFadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
-        /* Blink caret animation */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--text-gold); }
-        }
+        /* Header Style */
+        header { background-color: var(--card-dark-bg); padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(197, 155, 109, 0.15); position: sticky; top: 0; z-index: 1000; }
+        .header-brand h2 { font-size: 18px; text-transform: uppercase; cursor: pointer; }
+        .part-burma { color: var(--text-gold); font-weight: 900; }
+        .part-yoyar { color: #ff3344; font-weight: 900; }
+        .part-hd { color: #FFFFFF; font-weight: 900; }
 
-        /* Main Content Grid */
-        .main-body-content {
-            padding: 20px 14px;
-        }
+        /* Search Bar */
+        .search-container { padding: 12px 14px; }
+        .search-box { display: flex; background: var(--card-dark-bg); border: 1px solid rgba(197, 155, 109, 0.25); border-radius: 8px; overflow: hidden; }
+        .search-box input { flex-grow: 1; background: transparent; border: none; padding: 12px; color: #fff; font-size: 12px; outline: none; }
+        .search-btn { background: rgba(197, 155, 109, 0.15); border: none; color: var(--text-gold); padding: 0 16px; font-weight: bold; cursor: pointer; }
 
-        /* Section Headings Style */
-        .section-left-title {
-            margin-bottom: 16px;
-            border-left: 3px solid var(--luxury-gold);
-            padding-left: 8px;
-        }
-        .section-left-title h3 {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #fff;
-            letter-spacing: 0.5px;
-        }
-        .section-left-title p {
-            font-size: 9px;
-            color: var(--text-muted);
-            margin-top: 1px;
-        }
+        /* Animated Text */
+        #animatedTitle { font-size: 13px; color: var(--text-gold); font-weight: 800; margin-bottom: 8px; border-right: 2px solid var(--text-gold); width: fit-content; white-space: nowrap; overflow: hidden; }
+        #animatedBody { font-size: 12px; font-weight: 500; color: #EAD9CB; min-height: 50px; }
 
-        /* Top Categories Grid Setup */
-        .top-categories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 25px;
-        }
-        .circle-category-card {
-            background-color: var(--card-dark-bg);
-            border: 1px solid rgba(197, 155, 109, 0.15);
-            border-radius: 6px;
-            aspect-ratio: 1/1;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 4px;
-            cursor: pointer;
-        }
-        .circle-category-card img {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            opacity: 0.25;
-        }
-        .circle-category-card span {
-            position: relative;
-            z-index: 2;
-            font-size: 10px;
-            font-weight: bold;
-            color: var(--text-light);
-            text-transform: uppercase;
-        }
-
-        /* Premium Platinum Discoveries Grid */
-        .shakes-style-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 28px;
-        }
-        .shake-premium-card {
-            background-color: #16110F;
-            border: 1px solid rgba(197, 155, 109, 0.18);
-            border-radius: 8px;
-            padding: 0; 
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
-        }
-        .shake-thumb-placeholder {
-            width: 100%;
-            aspect-ratio: 16/10; 
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-        }
-        .shake-thumb-placeholder img {
-            width: 100%; height: 100%; object-fit: cover;
-        }
-        .adult-badge {
-            position: absolute;
-            top: 6px; left: 6px;
-            background: linear-gradient(45deg, #e50914, #b20710);
-            color: #fff;
-            font-size: 8px;
-            font-weight: 800;
-            padding: 2px 5px;
-            border-radius: 4px;
-            z-index: 5;
-        }
-        .shake-card-info {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            justify-content: space-between;
-        }
-        .shake-premium-card h4 {
-            font-size: 11px;
-            font-weight: 600;
-            color: #fff;
-            line-height: 1.4;
-            margin-bottom: 8px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; 
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .shake-meta-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(197, 155, 109, 0.08);
-            padding-top: 6px;
-        }
-        .shake-price {
-            font-size: 9px;
-            color: var(--text-muted);
-        }
-        .shake-watch-btn {
-            color: #fff;
-            background-color: #4A121A;
-            border: 1px solid rgba(197, 155, 109, 0.3);
-            font-size: 8px;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-
-        /* Latest Column List Style */
-        .latest-blogs-column {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .blog-style-card {
-            background-color: var(--card-dark-bg);
-            border: 1px solid rgba(197, 155, 109, 0.08);
-            border-radius: 6px;
-            overflow: hidden;
-            padding: 8px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            cursor: pointer;
-        }
-        .blog-media-left {
-            width: 65px;
-            height: 85px;
-            border-radius: 4px;
-            overflow: hidden;
-            flex-shrink: 0;
-            background-color: #000;
-        }
-        .blog-media-left img { width: 100%; height: 100%; object-fit: cover; }
-        .blog-info-right { flex-grow: 1; overflow: hidden; }
-        .blog-info-right h4 {
-            font-size: 11px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 3px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .blog-info-right p {
-            font-size: 9px;
-            color: var(--text-muted);
-            line-height: 1.3;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* Movie Player Section */
-        .cinema-theater-panel {
-            display: none;
-            background-color: var(--card-dark-bg);
-            border: 1px solid var(--luxury-gold);
-            padding: 8px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-        .video-player-outer-box {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 6px;
-        }
-        .video-player-outer-box iframe { width: 100%; height: 100%; border: none; }
-        .cinema-title-heading { font-size: 11px; font-weight: bold; color: var(--luxury-gold); line-height: 1.3; }
-
-        /* Luxury Mobile Footer Setup */
-        footer {
-            background-color: #0A0807;
-            color: var(--text-muted);
-            padding: 25px 15px;
-            margin-top: auto;
-            border-top: 1px solid rgba(197, 155, 109, 0.15);
-        }
-        .footer-grid-4col {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .footer-block h5 {
-            color: var(--luxury-gold);
-            font-size: 10px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-        .footer-block ul { list-style: none; }
-        .footer-block ul li { margin-bottom: 4px; }
-        .footer-block ul li a {
-            color: var(--text-muted);
-            font-size: 9px;
-            text-decoration: none;
-        }
-        .footer-bottom-bar {
-            border-top: 1px solid rgba(197, 155, 109, 0.05);
-            padding-top: 12px;
-            text-align: center;
-            font-size: 9px;
-        }
+        /* Card Styles */
+        .shakes-style-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 14px; }
+        .shake-premium-card { background: #16110F; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .shake-thumb-placeholder { width: 100%; aspect-ratio: 16/10; background: #000; }
+        .shake-thumb-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+        .shake-card-info { padding: 10px; }
+        .shake-card-info h4 { font-size: 11px; margin-bottom: 6px; }
+        .shake-watch-btn { color: #fff; background: var(--velvet-crimson); font-size: 8px; padding: 3px 8px; border-radius: 4px; display: inline-block; }
 
         .loader { display: block; margin: 15px auto; border: 2px solid rgba(255,255,255,0.05); border-top: 2px solid var(--luxury-gold); border-radius: 50%; width: 22px; height: 22px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -407,284 +71,89 @@
 <body>
 
 <div class="app-container">
-
-    <!-- Header Block (Custom Multi-Color Title) -->
     <header>
         <div class="header-brand" onclick="backToHome()">
-            <h2>
-                <span class="part-burma">Burma</span><span class="part-yoyar">YoYar</span><span class="part-hd">-HD</span>
-            </h2>
+            <h2><span class="part-burma">Burma</span><span class="part-yoyar">YoYar</span><span class="part-hd">-HD</span></h2>
         </div>
-        <div class="header-menu-icon" onclick="backToHome()">☰</div>
     </header>
 
-    <!-- 🔍 Search Component Panel -->
     <div class="search-container">
         <div class="search-box">
-            <input type="text" id="userSearchInput" placeholder="ဇာတ်ကားအမည်ဖြင့် ရှာဖွေပါ..." onkeypress="handleSearchKeyPress(event)">
+            <input type="text" id="userSearchInput" placeholder="ဇာတ်ကားအမည်ဖြင့် ရှာဖွေပါ...">
             <button class="search-btn" onclick="triggerSearch()">ရှာပါ</button>
         </div>
     </div>
 
-    <!-- Luxury Showcase Banner with Auto Typing Text -->
     <div class="hero-banner-section">
-        <div class="hero-sub" id="animatedTitle"></div>
-        <div class="hero-main-title" id="animatedBody"></div>
+        <div id="animatedTitle"></div>
+        <div id="animatedBody"></div>
     </div>
 
-    <!-- Core Feed Body -->
-    <div class="main-body-content">
-
-        <!-- Movie Player Panel -->
-        <div class="cinema-theater-panel" id="theaterBox">
-            <div class="video-player-outer-box">
-                <iframe id="videoIframe" src="" allowfullscreen></iframe>
-            </div>
-            <h3 class="cinema-title-heading" id="videoTitle">Streaming Player Title...</h3>
-        </div>
-
-        <!-- TOP CATEGORIES Section -->
-        <div class="section-left-title">
-            <h3>TOP CATEGORIES</h3>
-            <p>Explore The Recent Most Watched Genres This Week</p>
-        </div>
-        
-        <div class="top-categories-grid">
-            <div class="circle-category-card" onclick="fetchNewCategory('myanmar')">
-                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=150" alt="cat">
-                <span>Myanmar</span>
-            </div>
-            <div class="circle-category-card" onclick="fetchNewCategory('japan')">
-                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=150" alt="cat">
-                <span>Japan AV</span>
-            </div>
-            <div class="circle-category-card" onclick="fetchNewCategory('asian')">
-                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=150" alt="cat">
-                <span>Asian</span>
-            </div>
-        </div>
-
-        <!-- PLATINUM DISCOVERIES Section -->
-        <div class="section-left-title">
-            <h3>PLATINUM DISCOVERIES</h3>
-            <p>Explore The Recent Premium Exclusives This Week</p>
+    <div class="main-body-content content-transition" id="mainContent">
+        <!-- Categories -->
+        <div style="display: flex; gap: 10px; padding: 14px; overflow-x: auto;">
+            <button onclick="fetchNewCategory('myanmar')" style="padding: 8px 15px; border-radius: 20px; border: 1px solid var(--luxury-gold); background: transparent; color: var(--luxury-gold);">Myanmar</button>
+            <button onclick="fetchNewCategory('japan')" style="padding: 8px 15px; border-radius: 20px; border: 1px solid var(--luxury-gold); background: transparent; color: var(--luxury-gold);">Japan AV</button>
+            <button onclick="fetchNewCategory('asian')" style="padding: 8px 15px; border-radius: 20px; border: 1px solid var(--luxury-gold); background: transparent; color: var(--luxury-gold);">Asian</button>
         </div>
 
         <div class="shakes-style-grid" id="shakesGrid"></div>
-
-        <!-- LATEST MOVIES Section -->
-        <div class="section-left-title">
-            <h3>LATEST RELEASES</h3>
-            <p>Explore The Recent Most Uploaded Updates This Week</p>
-        </div>
-
-        <div class="latest-blogs-column" id="blogsColumn"></div>
         <div class="loader" id="networkLoader" style="display:none;"></div>
-
     </div>
-
-    <!-- 4-Column Luxury Footer -->
-    <footer>
-        <div class="footer-grid-4col">
-            <div class="footer-block">
-                <h5>Products</h5>
-                <ul>
-                    <li><a href="#">Premium VIP</a></li>
-                    <li><a href="https://t.me/Asinpay_bot" target="_blank">Telegram Bot</a></li>
-                </ul>
-            </div>
-            <div class="footer-block">
-                <h5>Category</h5>
-                <ul>
-                    <li><a href="#" onclick="fetchNewCategory('myanmar')">Myanmar Leak</a></li>
-                    <li><a href="#" onclick="fetchNewCategory('japan')">JAV Censored</a></li>
-                </ul>
-            </div>
-            <div class="footer-block">
-                <h5>Company Info</h5>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-block">
-                <h5>Follow Us</h5>
-                <ul>
-                    <li><a href="https://t.me/Asinpay_bot" target="_blank">Telegram Channel</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom-bar">
-            &copy; 2026 BurmaYoYar-HD. All Rights Reserved.
-        </div>
-    </footer>
-
 </div>
 
 <script>
     const API_URL = 'https://www.eporner.com/api/v2/video/search/';
-    let currentKeyword = 'myanmar';
-    let currentPage = 1;
-    let loading = false;
-
-    // Text Animation Data
-    const titleText = "ပရီမီယမ် ရသခံစားမှု့";
-    const bodyText = "မြန်မာကားများတင်သာမက VIP , LOCAL LEAK , အဆင့်မြင့် အာရှ ဇာတ်ကားပေါင်းများစွာကို ပရီမီယမ်ဆန်စွာ အခမဲ့ အဆင့်မြင့်မြင့် ကြည့်ရှုနิူင်ပြီ!";
+    
+    // Typing Animation
+    function typeEffect(element, text, speed) {
+        let i = 0;
+        function typing() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, speed);
+            }
+        }
+        typing();
+    }
 
     document.addEventListener("DOMContentLoaded", () => {
-        startEngine();
-        startTextAnimations();
+        typeEffect(document.getElementById("animatedTitle"), "ပရီမီယမ် ရသခံစားမှု့", 100);
+        setTimeout(() => {
+            typeEffect(document.getElementById("animatedBody"), "မြန်မာကားများတင်သာမက VIP , LOCAL LEAK , အဆင့်မြင့် အာရှ ဇာတ်ကားပေါင်းများစွာကို ပရီမီယမ်ဆန်စွာ အခမဲ့ အဆင့်မြင့်မြင့် ကြည့်ရှုနိူင်ပြီ!", 30);
+        }, 1500);
+        fetchNewCategory('myanmar');
     });
 
-    // 🌟 One-by-one Text Animation Logic
-    function startTextAnimations() {
-        let titleIdx = 0;
-        let bodyIdx = 0;
-        const titleContainer = document.getElementById("animatedTitle");
-        const bodyContainer = document.getElementById("animatedBody");
+    async function fetchNewCategory(cat) {
+        // Animation Trigger
+        const content = document.getElementById("mainContent");
+        content.classList.remove("content-transition");
+        void content.offsetWidth; // Force reflow
+        content.classList.add("content-transition");
 
-        function typeTitle() {
-            if (titleIdx < titleText.length) {
-                titleContainer.innerHTML += titleText.charAt(titleIdx);
-                titleIdx++;
-                setTimeout(typeTitle, 90);
-            } else {
-                // Title ပြီးရင် Body ကို စက္ကန့်ဝက်နားပြီး ဆက်တိုက်ရိုက်မည်
-                setTimeout(typeBody, 400);
-            }
-        }
-
-        function typeBody() {
-            if (bodyIdx < bodyText.length) {
-                bodyContainer.innerHTML += bodyText.charAt(bodyIdx);
-                bodyIdx++;
-                setTimeout(typeBody, 40);
-            }
-        }
-
-        typeTitle();
-    }
-
-    function startEngine() {
-        currentPage = Math.floor(Math.random() * 8) + 1;
-        loadContentFeed(currentKeyword, currentPage);
-    }
-
-    async function loadContentFeed(keyword, page) {
-        if (loading) return;
-        loading = true;
-        document.getElementById("networkLoader").style.display = "block";
-
-        try {
-            const res = await fetch(`${API_URL}?query=${encodeURIComponent(keyword)}&per_page=10&page=${page}&thumbsize=big`);
-            const data = await res.json();
-
-            if (data && data.videos && data.videos.length > 0) {
-                renderGridAndColumn(data.videos);
-            }
-        } catch (e) {
-            console.error(e);
-        } finally {
-            document.getElementById("networkLoader").style.display = "none";
-            loading = false;
-        }
-    }
-
-    function renderGridAndColumn(videos) {
-        const shakesGrid = document.getElementById("shakesGrid");
-        const blogsColumn = document.getElementById("blogsColumn");
-
-        const firstFour = videos.slice(0, 4);
-        firstFour.forEach(v => {
+        document.getElementById("shakesGrid").innerHTML = "";
+        const res = await fetch(`${API_URL}?query=${cat}&per_page=10`);
+        const data = await res.json();
+        
+        data.videos.forEach(v => {
             const card = document.createElement("div");
             card.className = "shake-premium-card";
-            card.onclick = () => playVideo(v.embed, v.title);
             card.innerHTML = `
-                <div class="shake-thumb-placeholder">
-                    <div class="adult-badge">18+</div>
-                    <img src="${v.default_thumb.src}" alt="thumb" loading="lazy">
-                </div>
+                <div class="shake-thumb-placeholder"><img src="${v.default_thumb.src}"></div>
                 <div class="shake-card-info">
                     <h4>${v.title}</h4>
-                    <div class="shake-meta-row">
-                        <span class="shake-price">👁️ ${parseInt(v.views).toLocaleString()}</span>
-                        <span class="shake-watch-btn">Watch</span>
-                    </div>
+                    <span class="shake-watch-btn">Watch Now</span>
                 </div>
             `;
-            shakesGrid.appendChild(card);
-        });
-
-        const remaining = videos.slice(4);
-        remaining.forEach(v => {
-            const item = document.createElement("div");
-            item.className = "blog-style-card";
-            item.onclick = () => playVideo(v.embed, v.title);
-            item.innerHTML = `
-                <div class="blog-media-left">
-                    <img src="${v.default_thumb.src}" alt="thumb" loading="lazy">
-                </div>
-                <div class="blog-info-right">
-                    <h4>${v.title}</h4>
-                    <p>Exclusive premium luxury screening update. Recorded views: ${parseInt(v.views).toLocaleString()} hits.</p>
-                </div>
-            `;
-            blogsColumn.appendChild(item);
+            document.getElementById("shakesGrid").appendChild(card);
         });
     }
 
-    // 🔍 Search Controls Logic
     function triggerSearch() {
-        const queryInput = document.getElementById("userSearchInput").value.trim();
-        if (queryInput === "") return;
-
-        // Clear UI Content
-        document.getElementById("shakesGrid").innerHTML = "";
-        document.getElementById("blogsColumn").innerHTML = "";
-        document.getElementById("theaterBox").style.display = "none";
-        document.getElementById("videoIframe").src = "";
-
-        currentKeyword = queryInput;
-        currentPage = 1;
-        loadContentFeed(currentKeyword, currentPage);
+        fetchNewCategory(document.getElementById("userSearchInput").value);
     }
-
-    function handleSearchKeyPress(event) {
-        if (event.key === "Enter") {
-            triggerSearch();
-        }
-    }
-
-    function playVideo(url, title) {
-        window.scrollTo({top: 150, behavior: 'smooth'});
-        document.getElementById("theaterBox").style.display = "block";
-        document.getElementById("videoIframe").src = url;
-        document.getElementById("videoTitle").innerText = title;
-    }
-
-    function fetchNewCategory(cat) {
-        document.getElementById("shakesGrid").innerHTML = "";
-        document.getElementById("blogsColumn").innerHTML = "";
-        document.getElementById("theaterBox").style.display = "none";
-        document.getElementById("videoIframe").src = "";
-        document.getElementById("userSearchInput").value = ""; // Clear search layout
-        currentKeyword = cat;
-        currentPage = Math.floor(Math.random() * 5) + 1;
-        loadContentFeed(currentKeyword, currentPage);
-    }
-
-    function backToHome() {
-        fetchNewCategory('myanmar');
-    }
-
-    window.onscroll = function() {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
-            if(!loading) {
-                currentPage++;
-                loadContentFeed(currentKeyword, currentPage);
-            }
-        }
-    };
 </script>
 
 </body>
