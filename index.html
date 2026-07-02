@@ -480,4 +480,62 @@
         currentKeyword = queryInput;
         currentPage = 1;
         appendMode = false; 
-        loadContentFeed(
+        loadContentFeed(currentKeyword, currentPage);
+    }
+
+    function handleSearchKeyPress(event) {
+        if (event.key === "Enter") { triggerSearch(); }
+    }
+
+    function playVideo(url, title) {
+        window.scrollTo({top: 150, behavior: 'smooth'});
+        document.getElementById("theaterBox").style.display = "block";
+        document.getElementById("videoIframe").src = url;
+        document.getElementById("videoTitle").innerText = title;
+    }
+
+    // 🌟 Top Categories ကို နှိပ်မှ အလုပ်လုပ်မယ့် စနစ်
+    function fetchNewCategory(cat) {
+        const wrapper = document.getElementById("contentWrapper");
+        
+        // 1. Animation စဖွင့်မယ်
+        wrapper.classList.remove("slide-in");
+        wrapper.classList.add("slide-out");
+        
+        setTimeout(async () => {
+            document.getElementById("theaterBox").style.display = "none";
+            document.getElementById("videoIframe").src = "";
+            document.getElementById("userSearchInput").value = ""; 
+            
+            currentKeyword = cat;
+            appendMode = false; // စာမျက်နှာ အဟောင်းတွေကို ရှင်းထုတ်မယ်
+            
+            // 2. နှိပ်လိုက်တဲ့ တစ်ကြိမ်တည်းမှာပဲ စာမျက်နှာအသစ်ရဖို့ Random ကောက်ယူမယ်
+            currentPage = Math.floor(Math.random() * 8) + 1;
+            
+            await loadContentFeed(currentKeyword, currentPage);
+            
+            // 3. Animation ပြီးဆုံးကြောင်း အသွင်ပြောင်းမယ်
+            wrapper.classList.remove("slide-out");
+            wrapper.classList.add("slide-in");
+        }, 400);
+    }
+
+    function backToHome() {
+        fetchNewCategory('myanmar');
+    }
+
+    // 🌟 အောက်ကို Scroll လုပ်ပြီး ကားအသစ်တွေ ထပ်တိုးလာတဲ့စနစ် (ဒီမှာ Random လုံးဝမလုပ်ဘဲ Page တွေကို +1 ပုံမှန်တိုးသွားပါမယ်)
+    window.onscroll = function() {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 600) {
+            if(!loading) {
+                appendMode = true; // အဟောင်းတွေမဖျက်ဘဲ အောက်ကနေ ပုံမှန်အတိုင်း ဒေတာဆက်တိုးလာအောင် လုပ်မယ်
+                currentPage++; // စာမျက်နှာကို ၁ ခုချင်းစီ အစဉ်လိုက်အတိုင်း ဆက်တိုက်ခေါ်ယူမယ် (Random စနစ်မပါပါ)
+                loadContentFeed(currentKeyword, currentPage);
+            }
+        }
+    };
+</script>
+
+</body>
+</html>
